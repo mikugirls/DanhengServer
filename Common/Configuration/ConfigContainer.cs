@@ -16,8 +16,8 @@ public class HttpServerConfig
 {
     public string BindAddress { get; set; } = "0.0.0.0";
     public string PublicAddress { get; set; } = "127.0.0.1";
-    public int Port { get; set; } = 443;
-    public bool UseSSL { get; set; } = true;
+    public int Port { get; set; } = 54321;
+    public bool UseSSL { get; set; } = false;
 
     public string GetDisplayAddress()
     {
@@ -77,7 +77,7 @@ public class ServerOption
     public bool AutoUpgradeWorldLevel { get; set; } = true;
     public bool EnableMission { get; set; } = true; // experimental
     public bool AutoLightSection { get; set; } = true;
-    public string Language { get; set; } = "EN";
+    public string Language { get; set; } = "CHS";
     public HashSet<string> DefaultPermissions { get; set; } = ["*"];
     public ServerAnnounce ServerAnnounce { get; set; } = new();
     public ServerProfile ServerProfile { get; set; } = new();
@@ -87,7 +87,7 @@ public class ServerOption
 
 public class ServerAnnounce
 {
-    public bool EnableAnnounce { get; set; } = true;
+    public bool EnableAnnounce { get; set; } = false;
     public string AnnounceContent { get; set; } = "Welcome to danhengserver!";
 }
 
